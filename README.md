@@ -1,6 +1,6 @@
 # Testbench Generator for SystemVerilog modules
 
-This python script takes in the SystemVerilog code for a module and creates a testbench from the module portlist. The testbench contains a clock and all the 
+This python script takes in the SystemVerilog code for a module and creates a testbench from the module portlist. The testbench contains a clock and all the regs and wires that are necessary to connect the testbench to the module.
 
 It can:
 - Ignore comments (both // and /**/)
