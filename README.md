@@ -11,7 +11,9 @@ It cannot (yet):
 - Deal with parameters in the module declaration
 
 Example:
+
 The file
+
 -------------------------
     /*
     This is counter with width WIDTH
@@ -25,7 +27,9 @@ The file
         
     endmodule
 -------------------------
+
 will produce this testbench:
+
 -------------------------
     module counter_tb;
     
