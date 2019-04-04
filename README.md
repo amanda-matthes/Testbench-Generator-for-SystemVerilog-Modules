@@ -16,11 +16,11 @@ The file
 
 -------------------------
     /*
-    This is counter with width WIDTH
+    This is an 8-bit counter
     */
     module counter (
         input wire clk, res_n,
-        output reg [WIDTH-1:0] cnt_out
+        output reg [7:0] cnt_out
         );                                   
         
         [...]
@@ -35,7 +35,7 @@ will produce this testbench:
     
     reg clk; 
     reg res_n; 
-    wire [WIDTH-1:0] cnt_out; 
+    wire [7:0] cnt_out; 
     parameter PERIOD = 20;
     clock #(.PERIOD(PERIOD)) clk_I (clk);
 
