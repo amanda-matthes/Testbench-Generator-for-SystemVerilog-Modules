@@ -106,7 +106,7 @@ def createInstantiation(modulename, portlist):
     result += ");"
     return result
 
-def getModuleName(file):
+def getModuleName(file): # call removeComments first
     temp = ""
     for char in file:
         if (temp == "module "):
@@ -191,18 +191,22 @@ def createTb (filename):
      
     
     # Create tasks
-    result += "\n \n"
+    result += "\n"
     result += createInitialiseTask(inputs)
     result += createResetTask()
 
-    result += "\n \n" + "endmodule"
+    result += "\n" + "endmodule"
 
-    return result 
+    return result
 
 
+print("Hi!\nThis program can take your SystemVerilog module and create a skeleton for your testbench.\n")
+print("Please note that this program currently does not support modules with parameters or any types other than wire and reg. Also note that all inputs must be wires and all outputs must be regs\n")
+print("Please enter the name of the .sv sourcefile (if your file is called counter.sv, please enter counter)")
+inp = input()
+filename = inp + ".sv"
+tbfilename = inp + "_tb.sv"
 
-filename = "file.txt"
-tbfilename = "file_tb.txt"
 print("Reading " + filename + " and creating testbench...")
 writeFile(tbfilename, (createTb(filename)))
 print("Testbench skeleton saved as " + tbfilename)
