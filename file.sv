@@ -6,6 +6,6 @@ module counter (
     output reg [WIDTH-1:0] cnt_out
     );                                   
     
-    [...]
     
 endmodule
+
